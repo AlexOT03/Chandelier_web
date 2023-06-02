@@ -6,9 +6,13 @@ class indexHome(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'index.html')
     
-class quoteHome(View):
+class fastQuoteHome(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'fastQuote.html')
+    
+class quoteHome(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'quote.html')
     
 class locationHome(View):
     def get(self, request, *args, **kwargs):
