@@ -9,12 +9,8 @@
     {% load static %}
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/favicon/apple-touch-icon.png' %}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}" />
-    <link rel="manifest" href="{% static 'img/favicon/site.webmanifest' %}" />
-    <link rel="mask-icon" href="{% static 'img/favicon/safari-pinned-tab.svg' %}" color="#ffffff" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/chandelier-64-logo.png' %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/chandelier-64-logo.png' %}" />
 
     <!-- Fontawesome -->
     <link type="text/css" href="{% static 'vendor/@fortawesome/fontawesome-free/css/all.min.css' %}" rel="stylesheet" />
@@ -32,8 +28,9 @@
             class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-dark">
             <div class="container position-relative">
                 <a class="navbar-brand me-lg-5" href="#">
-                    <img class="navbar-brand-dark" src="{% static 'img/brand/light.svg' %}" alt="Logo light" />
-                    <img class="navbar-brand-light" src="{% static 'img/brand/dark.svg' %}" alt="Logo dark" />
+                    <img class="navbar-brand-dark colored-image-white" src="{% static 'img/chandelier-64-logo.png' %}"
+                        alt="Logo light" />
+                    <img class="navbar-brand-light" src="{% static 'img/chandelier-64-logo.png' %}" alt="Logo dark" />
                 </a>
                 <div class="navbar-collapse collapse me-auto" id="navbar_global">
                     <div class="navbar-collapse-header">
@@ -55,10 +52,12 @@
                             <a class="nav-link" aria-current="page" href="{% url 'indexHome' %}">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{% url 'fastQuoteHome' %}">Cotizacion Rapida</a>
+                            <a class="nav-link" aria-current="page" href="{% url 'fastQuoteHome' %}">Cotizacion
+                                Rapida</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="frontPagesDropdown" aria-expanded="false" data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle" id="frontPagesDropdown" aria-expanded="false"
+                                data-bs-toggle="dropdown">
                                 Ubicaciones
                                 <span class="fas fa-angle-down nav-link-arrow ms-1"></span>
                             </a>
@@ -68,22 +67,22 @@
                                         <h6 class="d-block mb-3 text-primary">Tematicas</h6>
                                         <ul class="list-style-none mb-4">
                                             <li class="mb-2 megamenu-item">
-                                                <a class="menu-link" href="#">- Bodas</a>
+                                                <a class="menu-link" href="{% url 'locationHome' 1 'boda' %}">- Bodas</a>
                                             </li>
                                             <li class="mb-2 megamenu-item">
-                                                <a class="menu-link" href="#">- Cumpleaños</a>
+                                                <a class="menu-link" href="{% url 'locationHome' 2 'cumpleano' %}">- Cumpleaños</a>
                                             </li>
                                             <li class="mb-2 megamenu-item">
-                                                <a class="menu-link" href="#">- Aniversarios</a>
+                                                <a class="menu-link" href="{% url 'locationHome' 3 'aniversario' %}">- Aniversarios</a>
                                             </li>
                                             <li class="mb-2 megamenu-item">
-                                                <a class="menu-link" href="#">- Graduaciones</a>
+                                                <a class="menu-link" href="{% url 'locationHome' 4 'graduacion' %}">- Graduaciones</a>
                                             </li>
                                             <li class="mb-2 megamenu-item">
-                                                <a class="menu-link" href="#">- Baby showers</a>
+                                                <a class="menu-link" href="{% url 'locationHome' 5 'baby shawer' %}">- Baby showers</a>
                                             </li>
                                             <li class="mb-2 megamenu-item">
-                                                <a class="menu-link" href="#">- Quince años</a>
+                                                <a class="menu-link" href="{% url 'locationHome' 6 'quince ano' %}">- Quince años</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -110,16 +109,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img class="navbar-brand-dark mb-4" height="35" src="{% static 'img/brand/light.svg' %}"
-                        alt="Logo light" />
+                    <img class="navbar-brand-dark mb-4 colored-image-white" height="35"
+                        src="{% static 'img/chandelier-64-logo.png' %}" alt="Logo light" />
                     <p>
                         Pixel is a free and open source Bootstrap 5 UI Kit that will help
                         you prototype and build beautiful website pages and applications.
                     </p>
                     <ul class="social-buttons mb-5 mb-lg-0">
                         <li>
-                            <a href="https://twitter.com/" aria-label="twitter social link"
-                                class="icon-white me-2">
+                            <a href="https://twitter.com/" aria-label="twitter social link" class="icon-white me-2">
                                 <span class="fab fa-twitter"></span>
                             </a>
                         </li>
@@ -130,8 +128,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://dribbble.com/" class="icon-white"
-                                aria-label="dribbble social link">
+                            <a href="https://dribbble.com/" class="icon-white" aria-label="dribbble social link">
                                 <span class="fab fa-dribbble"></span>
                             </a>
                         </li>
@@ -168,7 +165,7 @@
                 <div class="col mb-md-0">
                     <a href="#" target="_blank" class="d-flex justify-content-center mb-3">
                         <!-- <img src="{% static 'img/themesberg.svg' %}" height="30" class="me-2" alt="Themesberg Logo"> -->
-                        <p class="text-white fw-bold footer-logo-text m-0">MasTech</p>
+                        <p class="text-white fw-bold footer-logo-text m-0">MasTecnologia</p>
                     </a>
                     <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
                         <p class="fw-normal font-small mb-0">
@@ -180,6 +177,7 @@
             </div>
         </div>
     </footer>
+    <button class="btn btn-primary position-fixed bottom-0 end-0 m-3" id="back-to-top" style="display: none;">Inicio</button>
     <!-- Core -->
     <script src="{% static 'vendor/@popperjs/core/dist/umd/popper.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>

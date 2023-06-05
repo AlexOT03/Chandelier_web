@@ -175,6 +175,110 @@
     </div>
 </section>
 
+<!-- price section -->
+<section class="section section-sm">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">¡Sumérgete en una experiencia única y participa en nuestros eventos online!</h2>
+            <p class="lead text-center">Encuentra la categoría perfecta para ti: Eventos pequeños, medianos o grandes.
+                ¡Te ofrecemos una amplia variedad de opciones para satisfacer tus necesidades y presupuesto!</p>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="card shadow text-center">
+                    <!-- Header -->
+                    <div class="card-header bg-white p-3">
+                        <h3 class="text-primary mb-4">Pequeño</h3>
+                        <span class="d-block">
+                            <span class="display-1 text-dark fw-bold">
+                                <span class="align-top font-medium">$</span>10,000
+                            </span>
+                            <span class="d-block text-gray font-small">/ desde</span>
+                        </span>
+                    </div>
+                    <!-- End Header -->
+                    <!-- Content -->
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-4">
+                            <li class="list-item pb-3">Asistencia limitada y de menor escala</li>
+                            <li class="list-item pb-3">Precios más asequibles para presupuestos bajos</li>
+                            <li class="list-item pb-3">Incluye seminarios web, conferencias en línea o talleres
+                                virtuales</li>
+                            <li class="list-item pb-3">Precios variables según duración, número de participantes y
+                                características adicionales</li>
+                        </ul>
+                        <div class="d-grid"><a href="#" class="btn btn-primary animate-up-1">Comprar ahora</a></div>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="card shadow text-center">
+                    <!-- Header -->
+                    <div class="card-header bg-white p-3">
+                        <h3 class="text-primary mb-4">Mediano</h3>
+                        <span class="d-block">
+                            <span class="display-1 text-dark fw-bold">
+                                <span class="align-top font-medium">$</span>50,000
+                            </span>
+                            <span class="d-block text-gray font-small">/ desde</span>
+                        </span>
+                    </div>
+                    <!-- End Header -->
+                    <!-- Content -->
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-4">
+                            <li class="list-item pb-3">Tamaño moderado, conferencias más grandes, simposios o
+                                presentaciones de productos</li>
+                            <li class="list-item pb-3">Precios ligeramente más altos que eventos pequeños</li>
+                            <li class="list-item pb-3">Requiere infraestructura técnica más sofisticada y mayor
+                                capacidad de participantes</li>
+                            <li class="list-item pb-3">Posibilidad de ofrecer paquetes personalizados según necesidades
+                                del cliente</li>
+                        </ul>
+                        <div class="d-grid"><a href="#" class="btn btn-primary animate-up-1">Comprar ahora</a></div>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="card shadow text-center">
+                    <!-- Header -->
+                    <div class="card-header bg-white p-3">
+                        <h3 class="text-primary mb-4">Grande</h3>
+                        <span class="d-block">
+                            <span class="display-1 text-dark fw-bold">
+                                <span class="align-top font-medium">$</span>90,000
+                            </span>
+                            <span class="d-block text-gray font-small">/ desde</span>
+                        </span>
+                    </div>
+                    <!-- End Header -->
+                    <!-- Content -->
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-4">
+                            <li class="list-item pb-3">Gran envergadura, como ferias comerciales virtuales, conciertos
+                                en línea o convenciones virtuales</li>
+                            <li class="list-item pb-3">Precios considerablemente más altos debido a la complejidad y
+                                alcance</li>
+                            <li class="list-item pb-3">Variedad de paquetes con servicios adicionales como diseño
+                                personalizado, soporte técnico dedicado, transmisión en alta calidad, servicios de
+                                traducción y funciones interactivas avanzadas</li>
+                            <li class="list-item pb-3">Precios reflejan la demanda, cantidad de participantes y
+                                características adicionales</li>
+                        </ul>
+                        <div class="d-grid"><a href="#" class="btn btn-primary animate-up-1">Cotizar ahora</a></div>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end price section -->
+
 <!-- places Section -->
 <section class="section section-sm">
     <div class="container">
@@ -332,7 +436,7 @@
         </div>
         <div class="row">
             <div class="col text-center">
-                <a href="{% url 'locationHome' 1 %}" class="btn btn-outline-primary">Ver las 000 ubicaciones -></a>
+                <a href="{% url 'locationHome' 0 'all' %}" class="btn btn-outline-primary">Ver las 000 ubicaciones -></a>
             </div>
         </div>
     </div>
