@@ -64,6 +64,11 @@ DJANGO_APPS = [
     "django.forms",
     "homePage",
     "adminPage",
+    "ubicaciones",
+    "tematicas",
+    "servicios",
+    "estados",
+    "cotizacion",
 ]
 THIRD_PARTY_APPS = [
     "crispy_forms",

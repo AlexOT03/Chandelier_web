@@ -87,88 +87,15 @@
         <div class="row">
             <div class="container">
                 <div class="scrollview-wrapper-x">
-
-                    <!-- Elemento 1 -->
+                    {% for estado in estados %}
                     <div class="scrollview-item text-center">
-                        <a href="">
-                            <img src="{% static 'img/team/profile-picture-1.jpg' %}" class="img-fluid rounded-circle"
+                        <a href="{% url 'locationHome' 'estado' estado.id %}">
+                            <img src="{{ estado.images.url}}" class="img-fluid rounded-circle"
                                 alt="Imagen 1">
-                            <h3>Título 1</h3>
+                            <h3>{{ estado.name }}</h3>
                         </a>
                     </div>
-                    <!-- Elemento 2 -->
-                    <div class="scrollview-item text-center">
-                        <a href="">
-                            <img src="{% static 'img/team/profile-picture-1.jpg' %}" class="img-fluid rounded-circle"
-                                alt="Imagen 1">
-                            <h3>Título 2</h3>
-                        </a>
-                    </div>
-                    <!-- Elemento 3 -->
-                    <div class="scrollview-item text-center">
-                        <a href="">
-                            <img src="{% static 'img/team/profile-picture-1.jpg' %}" class="img-fluid rounded-circle"
-                                alt="Imagen 1">
-                            <h3>Título 3</h3>
-                        </a>
-                    </div>
-                    <!-- Elemento 4 -->
-                    <div class="scrollview-item text-center">
-                        <a href="">
-                            <img src="{% static 'img/team/profile-picture-1.jpg' %}" class="img-fluid rounded-circle"
-                                alt="Imagen 1">
-                            <h3>Título 4</h3>
-                        </a>
-                    </div>
-                    <!-- Elemento 5 -->
-                    <div class="scrollview-item text-center">
-                        <a href="">
-                            <img src="{% static 'img/team/profile-picture-1.jpg' %}" class="img-fluid rounded-circle"
-                                alt="Imagen 1">
-                            <h3>Título 5</h3>
-                        </a>
-                    </div>
-                    <!-- Elemento 6 -->
-                    <div class="scrollview-item text-center">
-                        <a href="">
-                            <img src="{% static 'img/team/profile-picture-1.jpg' %}" class="img-fluid rounded-circle"
-                                alt="Imagen 1">
-                            <h3>Título 6</h3>
-                        </a>
-                    </div>
-                    <!-- Elemento 7 -->
-                    <div class="scrollview-item text-center">
-                        <a href="">
-                            <img src="{% static 'img/team/profile-picture-1.jpg' %}" class="img-fluid rounded-circle"
-                                alt="Imagen 1">
-                            <h3>Título 7</h3>
-                        </a>
-                    </div>
-                    <!-- Elemento 8 -->
-                    <div class="scrollview-item text-center">
-                        <a href="">
-                            <img src="{% static 'img/team/profile-picture-1.jpg' %}" class="img-fluid rounded-circle"
-                                alt="Imagen 1">
-                            <h3>Título 8</h3>
-                        </a>
-                    </div>
-                    <!-- Elemento 9 -->
-                    <div class="scrollview-item text-center">
-                        <a href="">
-                            <img src="{% static 'img/team/profile-picture-1.jpg' %}" class="img-fluid rounded-circle"
-                                alt="Imagen 1">
-                            <h3>Título 9</h3>
-                        </a>
-                    </div>
-                    <!-- Elemento 10 -->
-                    <div class="scrollview-item text-center">
-                        <a href="">
-                            <img src="{% static 'img/team/profile-picture-1.jpg' %}" class="img-fluid rounded-circle"
-                                alt="Imagen 1">
-                            <h3>Título 10</h3>
-                        </a>
-                    </div>
-
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -286,157 +213,31 @@
         <div class="album">
             <div class="pt-4 pb-4">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
-
+                    {% for location in locations %}
                     <div class="col">
                         <div class="card shadow-hover">
                             <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
                             <div class="card-body">
-                                <h5 class="card-title">Nombre</h5>
-                                <h6 class="card-subtitle">Ubicacion</h6>
+                                <h5 class="card-title">{{ location.name }}</h5>
+                                <h6 class="card-subtitle">{{ location.location }}</h6>
                                 <div class="card-text">
-                                    <b>Tematica</b> | <small>Cumpleaños</small>
+                                    <b>Tematica</b> | <small>{{ location.them.id }}</small>
                                 </div>
                                 <p class="card-text">
-                                    <b>$</b> <small>Precio</small> | <span
-                                        class="fas fa-user-circle"></span><small>Cupo</small>
+                                    <b>$</b> <small>{{ location.price }}</small> | <span
+                                        class="fas fa-user-circle"></span><small>{{ location.capacity }}</small>
                                 </p>
                                 <a href="{% url 'locationInfoHome' 1 %}" class="btn btn-primary">Mas informacion</a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col">
-                        <div class="card shadow-hover">
-                            <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Nombre</h5>
-                                <h6 class="card-subtitle">Ubicacion</h6>
-                                <div class="card-text">
-                                    <b>Tematica</b> | <small>Cumpleaños</small>
-                                </div>
-                                <p class="card-text">
-                                    <b>$</b> <small>Precio</small> | <span
-                                        class="fas fa-user-circle"></span><small>Cupo</small>
-                                </p>
-                                <a href="{% url 'locationInfoHome' 1 %}" class="btn btn-primary">Mas informacion</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card shadow-hover">
-                            <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Nombre</h5>
-                                <h6 class="card-subtitle">Ubicacion</h6>
-                                <div class="card-text">
-                                    <b>Tematica</b> | <small>Cumpleaños</small>
-                                </div>
-                                <p class="card-text">
-                                    <b>$</b> <small>Precio</small> | <span
-                                        class="fas fa-user-circle"></span><small>Cupo</small>
-                                </p>
-                                <a href="{% url 'locationInfoHome' 1 %}" class="btn btn-primary">Mas informacion</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card shadow-hover">
-                            <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Nombre</h5>
-                                <h6 class="card-subtitle">Ubicacion</h6>
-                                <div class="card-text">
-                                    <b>Tematica</b> | <small>Cumpleaños</small>
-                                </div>
-                                <p class="card-text">
-                                    <b>$</b> <small>Precio</small> | <span
-                                        class="fas fa-user-circle"></span><small>Cupo</small>
-                                </p>
-                                <a href="{% url 'locationInfoHome' 1 %}" class="btn btn-primary">Mas informacion</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card shadow-hover">
-                            <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Nombre</h5>
-                                <h6 class="card-subtitle">Ubicacion</h6>
-                                <div class="card-text">
-                                    <b>Tematica</b> | <small>Cumpleaños</small>
-                                </div>
-                                <p class="card-text">
-                                    <b>$</b> <small>Precio</small> | <span
-                                        class="fas fa-user-circle"></span><small>Cupo</small>
-                                </p>
-                                <a href="{% url 'locationInfoHome' 1 %}" class="btn btn-primary">Mas informacion</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card shadow-hover">
-                            <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Nombre</h5>
-                                <h6 class="card-subtitle">Ubicacion</h6>
-                                <div class="card-text">
-                                    <b>Tematica</b> | <small>Cumpleaños</small>
-                                </div>
-                                <p class="card-text">
-                                    <b>$</b> <small>Precio</small> | <span
-                                        class="fas fa-user-circle"></span><small>Cupo</small>
-                                </p>
-                                <a href="{% url 'locationInfoHome' 1 %}" class="btn btn-primary">Mas informacion</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card shadow-hover">
-                            <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Nombre</h5>
-                                <h6 class="card-subtitle">Ubicacion</h6>
-                                <div class="card-text">
-                                    <b>Tematica</b> | <small>Cumpleaños</small>
-                                </div>
-                                <p class="card-text">
-                                    <b>$</b> <small>Precio</small> | <span
-                                        class="fas fa-user-circle"></span><small>Cupo</small>
-                                </p>
-                                <a href="{% url 'locationInfoHome' 1 %}" class="btn btn-primary">Mas informacion</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card shadow-hover">
-                            <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Nombre</h5>
-                                <h6 class="card-subtitle">Ubicacion</h6>
-                                <div class="card-text">
-                                    <b>Tematica</b> | <small>Cumpleaños</small>
-                                </div>
-                                <p class="card-text">
-                                    <b>$</b> <small>Precio</small> | <span
-                                        class="fas fa-user-circle"></span><small>Cupo</small>
-                                </p>
-                                <a href="{% url 'locationInfoHome' 1 %}" class="btn btn-primary">Mas informacion</a>
-                            </div>
-                        </div>
-                    </div>
-
+                    {% endfor %}
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col text-center">
-                <a href="{% url 'locationHome' 0 'all' %}" class="btn btn-outline-primary">Ver las 000 ubicaciones -></a>
+                <a href="{% url 'locationHome' 'all' 1 %}" class="btn btn-outline-primary">Ver las 000 ubicaciones -></a>
             </div>
         </div>
     </div>
@@ -555,18 +356,11 @@
         </div>
         <div class="row">
             <ul class="">
+                {% for estado in estados %}
                 <li class="p-2 d-flex justify-content-between shadow-hover">
-                    <a href="">Zona</a><small>000</small>
+                    <a href="">{{ estado.name }}</a><small></small>
                 </li>
-                <li class="p-2 d-flex justify-content-between shadow-hover">
-                    <a href="">Zona</a><small>000</small>
-                </li>
-                <li class="p-2 d-flex justify-content-between shadow-hover">
-                    <a href="">Zona</a><small>000</small>
-                </li>
-                <li class="p-2 d-flex justify-content-between shadow-hover">
-                    <a href="">Zona</a><small>000</small>
-                </li>
+                {% endfor %}
             </ul>
         </div>
     </div>

@@ -6,19 +6,24 @@
 
 {% block content %}
 <!-- Hero -->
+{% if new_reference != "all" %}
 <section class="section-header bg-primary pt-6 pb-6 text-white">
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <div class="col-12 col-md-7 col-lg-6 text-center text-md-left">
-                <h1 class="display-2 mb-4">Lorem, ipsum.</h1>
-                <p class="lead mb-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-                    eveniet? Adipisci sunt cum, aut nisi labore molestiae corporis ratione sapiente..</p>
+
             </div>
-            <div class="col-12 col-md-5 d-none d-md-block text-center"><img
-                    src="{% static 'img/illustrations/about-illustration.svg' %}" alt=""></div>
+            <div class="col-12 col-md-5 d-none d-md-block text-center">
+                <img src="{{ tema.images.url}}" alt="">
+            </div>
         </div>
     </div>
 </section>
+{% else %}
+<section class="section-header bg-primary pt-6 pb-4 text-white">
+</section>
+{% endif %}
+
 <!-- End of Hero section -->
 <!-- section of ubications -->
 <section class="section section-sm">
@@ -33,7 +38,7 @@
             <div class="album">
                 <div class="pt-4 pb-4">
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
-    
+
                         <div class="col">
                             <div class="card shadow-hover">
                                 <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
@@ -51,7 +56,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="col">
                             <div class="card shadow-hover">
                                 <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
@@ -69,7 +74,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="col">
                             <div class="card shadow-hover">
                                 <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
@@ -87,7 +92,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="col">
                             <div class="card shadow-hover">
                                 <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
@@ -105,7 +110,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="col">
                             <div class="card shadow-hover">
                                 <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
@@ -123,7 +128,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="col">
                             <div class="card shadow-hover">
                                 <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
@@ -141,7 +146,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="col">
                             <div class="card shadow-hover">
                                 <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
@@ -159,7 +164,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="col">
                             <div class="card shadow-hover">
                                 <img src="{% static 'img/signature.svg' %}" class="card-img-top" alt="..." />
@@ -185,17 +190,17 @@
         <div class="row">
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
-                  <li class="page-item disabled">
-                    <a class="page-link">Previo</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">Siguiente</a>
-                  </li>
+                    <li class="page-item disabled">
+                        <a class="page-link">Previo</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Siguiente</a>
+                    </li>
                 </ul>
-              </nav>
+            </nav>
         </div>
     </div>
 </section>

@@ -18,7 +18,7 @@ urlpatterns = [
     # Your stuff: custom urls includes go here
     path('', include('homePage.urls')),
     path('', include('adminPage.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] +  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # API URLS
 urlpatterns += [

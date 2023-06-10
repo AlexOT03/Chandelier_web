@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD | {% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+<body class="bg-body-tertiary">
+    <main class="d-flex flex-nowrap">
+        <div class="d-flex  flex-column flex-shrink-1 p-4 text-bg-dark" style="width: 280px;">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <span class="fs-4">CRUD | Admin</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="{% url 'indexAdmin' %}" class="nav-link text-white">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'themsAdmin' %}" class="nav-link text-white">
+                        Tematicas
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'statesAdmin' %}" class="nav-link text-white">
+                        Estados
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+                        Ubicaciones
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+                <a href="" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="{% static 'img/mr.Nutt_clipdrop-background-removal.png' %}" alt="" width="32" height="32"
+                        class="rounded-circle me-2">
+                    <strong>Admin</strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                    <li><a class="dropdown-item" href="/">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+        {% block content %}{% endblock %}
+        <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    </main>
+</body>
+
+</html>
